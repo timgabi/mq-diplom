@@ -1,3 +1,5 @@
+
+/*Обнуление боди и font-size по умолчанию 15px*/
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,7 @@
 }
 
 
+/*Подключение шрифтов*/
 @font-face {
   font-family: OpenSans-Bold;
   font-style: normal;
@@ -19,107 +22,350 @@
 }
 
 
+/*Медиа запросы для декстопной версии сайта*/
 @media (min-width: 1200px) {
+  
+  /*Размеры banner под декстоп*/
   .banner {
     background-image: url(../images/banner-bg.jpg);
     background-position: center top;
     width: 100%;
     height: 27vw;
   }
+
+  /*Размеры label под декстоп*/
   .label_title {
     width: 43vw;
     font-size: 2.8125vw;
     line-height: 4.625vw;
     margin-top: 7vw;
   }
+
+  /*Размеры logo под декстоп*/
   .logo {
     width: 11vw;
     height: 2.4vw;
     top: 2vw;
     left: 15vw; 
   } 
+
+  /*Скрытие burger-menu*/
   .burger-menu {
     visibility: hidden;
   }
+
+  /*Размеры trand_line под декстоп*/
   .trands_line_header {
-    width: 17vw;
-    font-size: 1.25vw;
-    line-height: 2.2vw;
+    font-size: 1.2vw;
+    line-height: 1.75vw;
+    margin: 4vw auto 2.7vw;
+    font-weight: 700;
+  }
+  .trands_line_header:after {
+    width: 4vw;
+    height: 0.2vw;
+    margin-top: 0.5vw;
+    opacity: 0.400;
   }
   .trand_container  {
-    width: 24.8%;
+    width: 24.9%;
   }
   .trand_description {
-    display: flex;
-    flex-direction: column;
-    width: 18.8vw;
-    padding: 2vw 1.2vw;
-    margin: 1vw 1.4vw;
-  }
-  .trand_categories {
-    display: block;
-    margin-bottom: 0.2vw;
+    z-index: 3;
+    border: 3px solid #b59f5b;
+    width: 22vw;
+    padding: 1.65vw 2vw 1.65vw 2vw;
+    margin-left: 1.5vw;
+    margin-bottom: 1.15vw; 
   }
   .trand_category {
-    font-size: 0.9vw;
-    line-height: 0.3vw;
+    font-weight: 700;
+    font-size: 0.84vw;
+    line-height: 2.4vw;
+    margin-right: 1vw;
   }
   .trand_title {
-    margin-top: 0.5vw;
-    display: block;
-    font-size: 1.3vw;
-    line-height: 1.75vw;
+    font-weight: 700;
+    font-size: 1.2vw;
+    line-height: 1.45vw;
   }
+
+  /*Размеры для полосы новостей main под декстоп*/
   .main_box {
     float: left;
-    margin-left: 15%;
-    width: 47.8%;
+    margin-top: 3.85vw;
+    margin-left: 14.75vw; 
     position: relative;
   }
-  .post_list {
-    width: 100%;
-    margin-right: 7%;
-  }
-  .frame_box {
-    width: 23.8125rem;
+  .main_post {
+    margin-bottom: 3.6vw;
   }
   .news_picture {
-    object-fit: cover;
-    width: 50%;
-    margin-right: 3%;
+    width: 25vw;
+    height: 17.4vw;
+  }
+  .frame_box {
+    margin-left: 1.8vw;
+  }
+  .frame_category_box {
+    width: 20vw;
+  }
+  .frame_category {
+    margin-right: 1.25vw;
+    font-size: 0.84vw;
+    font-weight: 700;
+  }
+  .frame_title {
+    width: 20vw;
+    font-size: 1.2vw;
+    line-height: 1.4vw;
+    margin-bottom: 1.3vw;
+    font-weight: 700;
+  }
+  .main_post_pubdate {
+    font-size: 0.72vw;
+    line-height: 2.4vw;
+    font-weight: 400;
+  }
+  .author {
+    font-size: 0.75vw;
+    line-height: 2.4vw;
+    font-weight: 700;
   }
   .post_text {
-    width: 350px;
+    width: 22vw;
+    line-height: 1.32vw;
+    font-size: 0.9vw;
+    margin-top: 1.8vw;
   }
+
+  /*Размеры для боковой полосы sidebar под декстоп*/
   .side_bar {
     position: absolute;
-    left: 68%;
+    left: 69vw;
+    margin-top: 3.85vw;
   }
-  .latest_post_box, .tags, .themes {
-    width: 17rem;
+
+  .latest_post_header {
+    width: 16.3vw;
+    margin-bottom: 1.8vw;
+    font-size: 0.85vw;
+    line-height: 1.75vw;
+    font-weight: 700;
+  }
+  .latest_post_header:after {
+    opacity: 0.4;
+    width: 4vw;
+    height: 0.18vw;
+  }
+  .latest_post {
+    width: 16.3vw;
+    margin-bottom: 1.32px;
+  }
+  .latest_post_picture {
+    width: 4.2vw;
+    height: 4.2vw;
+    margin-right: 1.15vw;
+  }
+  .latest_post_pubdate {
+    opacity: 0.541;
+    font-size: 0.7vw;
+    font-weight: 400;
+  }
+  .latest_post_link {
+    font-size: 0.84vw;
+    line-height: 1vw;
+    font-weight: 700;
+  }
+  .latest_post_link:hover {
+    font-size: 0.84vw;
+    line-height: 1vw;
+    font-weight: 700;
+  }
+
+  .search {
+    width: 16.3vw;
+  }
+  .search_row {
+    margin-top: 3.6vw;
+    width: 16vw;
+    height: 2.9vw;
+    padding-left: 1.2vw;
+  }
+  .search_row::placeholder {
+    opacity: 0.541;
+    font-size: 0.84vw;
+    line-height: 1vw;
+    font-weight: 400;
+  }
+  .search_row:focus {
+    width: 16vw;
+    height: 2.9vw;
+  }
+  .search_submit {
+    margin-top: 3.6vw;
+    width: 2.9vw;
+    height: 2.9vw;
+    right: 0;
+    background-size: auto 50%;
+  }
+  .search_submit:hover {
+    width: 2.9vw;
+    height: 2.9vw;
+  }
+
+  .email_row {
+    width: 16.3vw;
+    height: 2.9vw;
+    margin-top: 1.2vw;
+    padding-left: 1.2vw;
+  }
+  .email_row::placeholder {
+    opacity: 0.541;
+    font-size: 0.78vw;
+    line-height: 5.20vw;
+    font-weight: 400;
+  }
+  .email_row:focus {
+    width: 16.3vw;
+    height: 2.9vw;
+  }
+
+  .subscribe-box {
+    width: 16.3vw;
+    margin-top: 3vw;
+  }
+  .subscribe_title {
+    font-size: 0.84vw;
+    line-height: 1.74px;
+    font-weight: 700;
+  }
+  .subscribe_title:after {
+    opacity: 0.4;
+    margin-top: 0.8vw;
+    width: 4vw;
+    height: 0.2vw;
+  }
+  .subscribe_text_btn {
+    font-size: 0.84vw;
+    line-height: 2.4vw;
+    font-weight: 700;
+  }
+  .subscribe_submit {
+    margin-top: 1vw;
+    width: 16.3vw;
+    height: 2.9vw;
+  }
+  .subscribe_submit:hover {
+    width: 16.3vw;
+    height: 2.9vw;
+  }
+
+  .tag_title {
+    margin-top: 1.2vw;
+    font-size: 0.84vw;
+    line-height: 1.74vw;
+    font-weight: 700;
+  }
+  .tag_title:after {
+    opacity: 0.4;
+    width: 4vw;
+    height: 0.2vw;
+  }
+  .tags {
+    width: 17vw;
+    margin-top: 3vw;
+  }
+  .tag_list {
+    margin-top: 1.4vw;
+  }
+  .tag {
+    font-size: 0.72vw;
+    font-weight: 700;
+  }
+  .border {
+    display: block;
+    margin-right: 0.3vw;
+    margin-bottom: 0.3vw;
+    padding: 0.18vw 0.9vw;
+    text-align: center;
+    background-color: rgba(244,243,241,0);
+    border: 0.18vw solid #eeeeee;
+  }
+  .border:hover {
+    background-color: rgba(244,243,241,0);
+    border: 0.18vw solid #b59f5b;
+    cursor: pointer;
+  }
+
+  .themes_title {
+    margin-top: 3vw;
+    font-size: 0.84vw;
+    line-height: 1.74vw;
+    font-weight: 700;
+  }
+  .themes_title:after {
+    opacity: 0.4;
+    width: 4vw;
+    height: 0.2vw;
+  }
+  .theme_list {
+    width: 16.3vw;
+    margin-top: 0.42vw;
+  }
+  .theme {
+    font-size: 0.84vw;
+    line-height: 2.83vw;
+    font-weight: 700;
+  }
+  .theme:hover {
+    font-size: 0.84vw;
+    line-height: 2.83vw;
+    font-weight: 700;
+  }
+  .themes_index {
+    font-size: 0.72vw;
+    line-height: 2.16vw;
+    font-weight: 700;
+  }
+  .indextheme_hr {
+    width: 16.3vw;
+    height: 0.06vw;
+    margin-top: -0.4vw;
+  }
+
+  /*Размеры для полосы product под декстоп*/
+  .product_box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .product_line_header {
-    margin-left: auto;
-    margin-right: auto;
-    width: 10vw;
-    font-size: 1.1428vw;
+    margin: 0 auto;
+    width: 12vw;
+    line-height: 1.74vw;
+    font-weight: 700;
+    font-size: 1.2vw;
   }
-  .product_title {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+  .product_line_header:after {
+    opacity: 0.4;
+    margin: 0.5vw auto;
+    width: 66px;
+    height: 3px;
   }
   .products_line {
-    width: 68%;
-    margin-top: -0.7%;
-    margin-left: 16.5%;
+    width: 67.77vw;
+    margin-left: 15.8vw;
   }
   .product_container  {
-    margin-top: 4%;
-    width: 25%;
+    margin-top: 1.1vw; 
+    width: 18vw;
   }
-  .image_container {
-    margin-right: auto;
-    margin-left: auto;
+  .product_title {
+    font-size: 1.2vw;
+    line-height: 1.44vw;
+    font-weight: 700;
   }
   .product_image {
     width: 100%;
@@ -128,394 +374,1416 @@
   .product_description {
     border: 3px solid #b59f5b;
     width: 100%;
-    height: 50%;
+    height: 9.5vw;
     padding: 15% 5%;
     margin-top: -12%;
-    margin-right: calc(-8vw + 40.5%);
-    width: 17.2vw;
+    margin-right: calc(-8vw + 36.5%);
+    width: 18.4vw;
   }
+  .product_description_paragraph {
+    font-size: 0.9vw; 
+    line-height: 1.3vw;
+    font-weight: 400;
+  }
+  .product_description_paragraph:hover {
+    opacity: 0.8;
+  }
+  .product_link:hover {
+    opacity: 0.9;
+  }
+  
+  .price_and_magazine_container {
+    margin-top: 1.15vw;
+  }
+  .price_container {
+    padding-bottom: 1%;
+    width: 45%;
+  }
+  .price_title_small {
+    font-size: 0.84vw;
+    line-height: 1.44vw;
+    font-weight: 700;
+  }
+  .price_title_big {
+    font-size: 1.2vw;
+    line-height: 1.44vw;
+    font-weight: 700;
+  }
+  
+  .magazine_submit {
+    width: 45%;
+    height: 2.77vw;
+  }
+  .magazine_submit:hover {
+    width: 45%;
+    height: 2.77vw;
+  }
+  .magazine_submit_title {
+    font-size: 0.84vw;
+    line-height: 2.4vw;
+    font-weight: 700;
+  }
+
+  /*Размеры для баннера и копирайта в footer под декстоп*/
   .footer_banner {
-    width: 70%;
-    height: 83px;
-    background-color: #f4f7f6;
-    margin-top: 4%;
-    margin-left: 15.5%;
+    width: 70.5vw;
+    height: 5.1vw;
+    margin-top: 3.9vw;
+    margin-left: 14.75vw;
   }
+  .socials {
+    width: 7vw;
+  }
+  .icon {
+    width: 1.2vw;
+    height: 1.2vw;
+  }
+
   .copyright {
-    margin-left: 17%;
+    width: 70.5vw;
+    margin-top: 3.9vw;
+    margin-bottom: 1.5vw;
+    font-size: 0.72vw;
+    line-height: 2.4vw;
+    margin-left: 14.75vw;
+    font-weight: 700;
+  }
+
+  /*Размеры Popup для декстопа*/
+  .back::before {
+    z-index: 4;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+  .popup-body {
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 31;
+  }
+  .popup-content {
+    margin: 14.5vw auto;
+    width: 390px;
+ }
+  .checkbox__hidden::after {
+    right: 0;
+    top: 0;
+    margin-top: -30px;
+    width: 18px;
+    height: 18px;
+  }
+  .popup-header {
+    margin-bottom: 13px;
+    margin-top: 39px;
+  }
+  .popup-title {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 700;
+  }
+  .popup-title:after {
+    opacity: 0.4;
+    margin-top: 8px;
+    width: 66px;
+    height: 3px;
+  }
+  .popup-select {
+    margin-bottom: 20px;
+  }
+  .popup-select__row::after {
+    right: 5px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+  }
+  select {
+    padding-right: 25px;
+  }
+  .popup-select__header {
+    font-size: 13px;
+    line-height: 40px;
+  }
+  .popup-select__options {
+    padding-left: 20px;
+    width: 330px;
+    height: 45px;
+    font-size: 13px;
+  }
+  .popup-select__option {
+    font-size: 13px;
+    opacity: 0.541;
+  }
+  .popup-radio__box {
+    margin-left: -110px;
+    margin-bottom: 20px;
+  }
+  .popup-radio__header {
+    font-size: 13px;
+  }
+  .radio-button__text {
+    font-size: 13px   
+  }
+  .radio-button  {
+    height: 22px;
+    width: 22px;
+  }
+  .radio-button::before {
+    top: 5px;
+    left: 5px; 
+    width: 18px;
+    height: 18px; 
+  }
+  .radio-button:checked::after {
+    top: 5px;
+    left: 5px; 
+    width: 18px;
+    height: 18px; 
+  }
+  .popup-textarea {
+    margin-bottom: 20px;
+  }
+  .popup-textarea__header {
+    width: 330px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  textarea::placeholder {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .popup-textarea__window {
+    width: 330px;
+    height: 98px;
+    font-size: 13px;
+    line-height: 22px;
+    padding: 10px 20px;
+  }
+  .popup-text__btn {
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 700;
+  }
+  .popup-submit__btn {
+    margin-bottom: 55px;
+    width: 330px;
+    height: 45px;
+  }
+  .popup-submit__btn:hover {
+    width: 330px;
+    height: 45px;
   }
 }
 
-
+/*Медиа запрос под таблет версию*/
 @media (min-width: 641px) and (max-width: 1199px) {
+  
+  /*Размеры banner под таблет*/
   .banner {
     background-image: url(../images/banner-bg-tablet.jpg);  
     background-position: center bottom;
     height: 50vw;
   }
+
+  /*Размеры banner под таблет*/
   .label_title {
     width: 80vw;
-    margin-top: 7vw;
-    font-size: 5vw;
-    line-height: 6.5vw;
+    margin-top: 13.5vw;
+    font-size: 5.2vw;
+    line-height: 7.15vw;
   }
+
+  /*Размеры logo под таблет*/
   .logo {
-    width: 17vw;
-    height: 12vw;
-    top: 0.2vw;
-    left: 7vw; 
+    width: 20.8vw;
+    height: 4.7vw;
+    top: 6.5vw;
+    left: 4.42vw; 
   } 
+
+  /*Скрытие menu*/
   .menu {
     visibility: hidden;
   }
+
+  /*Размеры trand_line под таблет*/
   .trands_line_header {
-    width: 20vw;
-    font-size: 1.82vw;
-    line-height: 4.9vw;
+    font-size: 2.34vw;
+    line-height: 3.77vw;
+    margin: 6.5vw auto 5vw;
+    font-weight: 700;
+  }
+  .trands_line_header:after {
+    width: 8.6vw;
+    height: 0.2vw;
+    margin-top: 0.5vw;
+    opacity: 0.400;
   }
   .trand_container  {
     width: 49.8%;
-    margin-top: 0.8vw;
+    height: 32vw;
+    margin-bottom: 0.3vw;
   }
   .trand_description {
-    display: flex;
-    flex-direction: column;
-    width: 72%;
-    padding: 5.2vw 3.8vw;
-    margin: 1.8vw 2.2vw;
+    z-index: 3;
+    border: 3px solid #b59f5b;
+    width: 44.92vw;
+    padding: 4.55vw 4.03vw 4.55vw 4.03vw;
+    margin-left: 2.6vw;
+    margin-bottom: 1.7vw; 
   }
-  .trand_categories {
-    display: block;
-    margin-bottom: 0.5vw;
+  .trand_image {
+    object-fit: cover;
+    object-position: center bottom;
   }
   .trand_category {
-    font-size: 2vw;
-    line-height: 0.5vw;
+    font-size: 1.82vw;
+    line-height: 4.81vw;
+    font-weight: 700;
+    margin-right: 1vw;
   }
   .trand_title {
-    display: block;
-    margin-top: 1vw;
-    font-size: 3vw;
-    line-height: 3.3vw;
+    font-weight: 700;
+    font-size: 2.21vw;
+    line-height: 2.86vw;
   }
+
+  /*Размеры для новостей main под таблет*/
   .main_box {
-    width: 47.8%;
     float: left;
-    margin-left: 4%;
+    margin-top: 1.18vw;
+    margin-bottom: 3.11vw;
+    margin-left: 4.55vw;
+    position: relative;
   }
-  .post_list {
-    width: 100%;
-    margin-right: 7%;
-  } 
   .main_post {
     flex-direction: column;
+    margin-top: 5.33vw;
   }
-  .frame_box {
-    width: 100%;
-    padding-bottom: 1.3rem;
-    margin-bottom: 1.4rem;
+  .main_post:nth-of-type(n+1):nth-of-type(-n+4) {
     border-bottom: 3px solid #cdcdcd;
   }
   .news_picture {
-    width: 100%;
-    margin-bottom: 2rem;
-    background-color: #eff6f1;
+    width: 51.04vw;
+    height: 39.45vw;
+    margin-bottom: 1.95vw;
+  }
+  .frame_title {
+    width: 51.3vw;
+    font-size: 2.21vw;
+    line-height: 2.86vw;
+    margin-bottom: 2.8vw;
+    font-weight: 700;
+  }
+  .frame_category {
+    margin-right: 2.6vw;
+    font-size: 1.82vw;
+    line-height: 5.20vw;
+    font-weight: 700;
+  }
+  .main_post_pubdate {
+    font-size: 1.56vw;
+    line-height: 5.20vw;
+    font-weight: 400;
+  }
+  .author {
+    font-size: 1.56vw;
+    line-height: 5.20vw;
+    font-weight: 700;
   }
   .post_text {
-    width: 100%;
+    width: 51.04vw;
+    font-size: 1.95vw;
+    line-height: 2.86vw;
+    margin-top: 1.8vw;
+    margin-bottom: 2.99vw;
   }
-  .product_title {
-    font-size: 1.0625rem;
-    line-height: 1.375rem;
+
+  /*Размеры для боковой полосы sidebar под таблет*/
+  .side_bar {
+    position: absolute;
+    left: 60.15vw;
+    margin-top: 6.2vw;
+  }
+
+  .latest_post_header {
+    width: 35.15vw;
+    margin-bottom: 3vw;
+    font-size: 1.82vw;
+    line-height: 3.77vw;
+    font-weight: 700;
+  }
+  .latest_post_header:after {
+    opacity: 0.4;
+    width: 8.6vw;
+    height: 0.18vw;
+    margin-top: 1vw;
+  }
+  .latest_post {
+    width: 35.2vw;
+    margin-bottom: 2.85vw;
+  }
+  .latest_post_picture {
+    width: 9.11vw;
+    height: 9.11vw;
+    margin-right: 2.6vw;
+  }
+  .latest_post_pubdate {
+    opacity: 0.541;
+    font-size: 1.56vw;
+    font-weight: 400;
+  }
+  .latest_post_link {
+    font-size: 1.82vw;
+    line-height: 2.34vw;
+    font-weight: 700;
+  }
+  .latest_post_link:hover {
+    font-size: 1.82vw;
+    line-height: 2.34vw;
+    font-weight: 700;
+  }
+
+  .search {
+    width: 35.15vw;
+  }
+  .search_row {
+    margin-top: 7.5vw;
+    width: 35vw;
+    height: 6.25vw;
+    padding-left: 2.34vw;
+  }
+  .search_row::placeholder {
+    opacity: 0.541;
+    font-size: 1.69vw;
+    line-height: 5.20vw;
+    font-weight: 400;
+  }
+  .search_row:focus {
+    width: 35vw;
+    height: 6.25vw;
+  }
+  .search_submit {
+    margin-top: 7.5vw;
+    width: 6.25vw;
+    height: 6.25vw;
+    right: 0;
+    background-size: auto 50%;
+  }
+  .search_submit:hover {
+    width: 6.25vw;
+    height: 6.25vw;
+  }
+
+  .email_row {
+    width: 35vw;
+    height: 6.25vw;
+    margin-top: 2.15vw;
+    padding-left: 2.34vw;
+  }
+  .email_row::placeholder {
+    opacity: 0.541;
+    font-size: 1.69vw;
+    line-height: 5.20vw;
+    font-weight: 400;
+  }
+  .email_row:focus {
+    width: 35vw;
+    height: 6.25vw;
+  }
+
+  .subscribe-box {
+    width: 35.15vw;
+    margin-top: 7.5vw;
+  }
+  .subscribe_title {
+    font-size: 1.82vw;
+    line-height: 3.77vw;
+    font-weight: 700;
+  }
+  .subscribe_title:after {
+    opacity: 0.4;
+    margin-top: 0.85vw;
+    width: 8.59vw;
+    height: 0.39vw;
+  }
+  .subscribe_text_btn {
+    font-size: 1.82;
+    line-height: 5.20vw;
+    font-weight: 700;
+  }
+  .subscribe_submit {
+    margin-top: 2.2vw;
+    width: 35vw;
+    height: 6.25vw;
+  }
+  .subscribe_submit:hover {
+    width: 35vw;
+    height: 6.25vw;
+  }
+
+  .tag_title {
+    margin-top: 7.81vw;
+    font-size: 1.82vw;
+    line-height: 3.77vw;
+    font-weight: 700;
+  }
+  .tag_title:after {
+    opacity: 0.4;
+    margin-top: 0.85vw;
+    width: 8.59vw;
+    height: 0.39vw;
+  }
+  .tags {
+    width: 35.15vw;
+    margin-top: 3vw;
+  }
+  .tag_list {
+    margin-top: 4vw;
+  }
+  .tag {
+    font-size: 1.56vw;
+    font-weight: 700;
+  }
+  .border {
+    display: block;
+    margin-right: 0.65vw;
+    margin-bottom: 0.78vw;
+    padding: 0.71vw 1.95vw;
+    text-align: center;
+    background-color: rgba(244,243,241,0);
+    border: 0.18vw solid #eeeeee;
+  }
+  .border:hover {
+    background-color: rgba(244,243,241,0);
+    border: 0.18vw solid #b59f5b;
+    cursor: pointer;
+  }
+
+  .themes_title {
+    margin-top: 5.81vw;
+    font-size: 1.82vw;
+    line-height: 3.77vw;
+    font-weight: 700;
+  }
+  .themes_title:after {
+    opacity: 0.4;
+    margin-top: 0.85vw;
+    width: 8.59vw;
+    height: 0.39vw;
+  }
+  .theme_list {
+    width: 35.15vw;
+    margin-top: 2.3vw;
+  }
+  .theme {
+    font-size: 1.82vw;
+    line-height: 6.11vw;
+    font-weight: 700;
+  }
+  .theme:hover {
+    font-size: 1.82vw;
+    line-height: 6.11vw;
+    font-weight: 700;
+  }
+  .themes_index {
+    font-size: 1.82vw;
+    line-height: 4.68vw;
+    font-weight: 700;
+  }
+  .indextheme_hr {
+    width: 35.15vw;
+    height: 0.13vw;
+    margin-top: -0.4vw;
+  }
+
+  /*Размеры для полосы product под таблет*/
+  .product_box {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .product_line_header {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vw;
+    width: 21vw;
+    font-size: 2.34vw;
+    line-height: 3.77vw;
+  }
+  .product_line_header:after {
+    display: block;
+    margin-top: 0.82vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8.6vw;
+    height: 0.2vw;
+    opacity: 0.400;
   }
   .products_line {
-    width: 90%;
-    margin-top: -0.7%;
+    width: 85.02vw;
     margin-left: auto;
     margin-right: auto;
   }
   .product_container  {
-    margin-top: 4%;
-    width: 49%;
+    margin-top: 1.65vw;
+    width: 38vw;
   }
-  .image_container {
-    width: 75%;
-    margin-right: auto;
-    margin-left: auto;
+  .product_title {
+    font-size: 2.21vw;
+    line-height: 2.86vw;
   }
   .product_image {
     width: 100%;
+    height: 100%;
   }
   .product_description {
     border: 3px solid #b59f5b;
     width: 100%;
-    height: 43.5%;
-    padding: 15% 5%;
+    height: 33.24%;
+    padding: 15% 8%;
     margin-top: -12%;
-    margin-right: calc(-8vw + 26.5%);
-    width: 32vw;
+    margin-right: calc(-8vw + 16.5%);
+    width: 35.5vw;
   }
-  .product_line_header {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 99%;
-    height: 100%;
-    font-size: 1.125rem;
+  .product_description_paragraph {
+    font-size: 1.95vw; 
+    font-weight: 400;
   }
-  .side_bar {
-    position: absolute;
-    left: 58%;
+  .product_description_paragraph:hover {
+    opacity: 0.8;
   }
-  .latest_post_box, .tags, .themes {
-    width: 272px;
+  .product_link:hover {
+    opacity: 0.9;
   }
+
+  .price_and_magazine_container {
+    margin-top: 3.3vw;
+  }
+  .price_container {
+    padding-bottom: 1%;
+    width: 45%;
+  }
+  .price_title_small {
+    font-size: 1.82vw;
+    line-height: 3.125vw;
+    font-weight: 700;
+  }
+  .price_title_big {
+    font-size: 2.6vw;
+    line-height: 3.125vw;
+    font-weight: 700;
+  }
+  
+  .magazine_submit {
+    width: 45%;
+    height: 6.11vw;
+  }
+  .magazine_submit:hover {
+    width: 45%;
+    height: 6.11vw;
+  }
+  .magazine_submit_title {
+    font-size: 1.82vw;
+    line-height: 5.20vw;
+    font-weight: 700;
+  }
+
+  /*Размеры баннера в футере для таблета*/
   .footer_banner {
-    width: 91%;
-    height: 83px;
+    width: 90.75vw;
+    height: 10.5vw;
     background-color: #f4f7f6;
-    margin-top: 4%;
+    margin-top: 6.77vw;
     margin-left: auto;
     margin-right: auto;
+  }
+  .socials {
+    width: 15vw;
+  }
+  .icon {
+    width: 2.6vw;
+    height: 2.6vw;
   }
   .copyright {
-    margin-left: 16%;
+    width: 90.75vw;
+    margin: 6.5vw auto 4.8vw auto;
+    font-size: 1.56vw;
+    line-height: 5.2vw;
+    font-weight: 700;
+  }
+
+  /*Размеры Popup для таблета*/
+  .back::before {
+    z-index: 4;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+  .popup-body {
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 31;
+  }
+  .popup-content {
+    margin: 30vw auto;
+    width: 390px;
+ }
+  .checkbox__hidden::after {
+    right: 0;
+    top: 0;
+    margin-top: -30px;
+    width: 18px;
+    height: 18px;
+  }
+  .popup-header {
+    margin-bottom: 13px;
+    margin-top: 39px;
+  }
+  .popup-title {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 700;
+  }
+  .popup-title:after {
+    opacity: 0.4;
+    margin-top: 8px;
+    width: 66px;
+    height: 3px;
+  }
+  .popup-select {
+    margin-bottom: 20px;
+  }
+  .popup-select__row::after {
+    right: 5px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+  }
+  select {
+    padding-right: 25px;
+  }
+  .popup-select__header {
+    font-size: 13px;
+    line-height: 40px;
+  }
+  .popup-select__options {
+    padding-left: 20px;
+    width: 330px;
+    height: 45px;
+    font-size: 13px;
+  }
+  .popup-select__option {
+    font-size: 13px;
+    opacity: 0.541;
+  }
+  .popup-radio__box {
+    margin-left: -110px;
+    margin-bottom: 20px;
+  }
+  .popup-radio__header {
+    font-size: 13px;
+  }
+  .radio-button__text {
+    font-size: 13px   
+  }
+  .radio-button  {
+    height: 22px;
+    width: 22px;
+  }
+  .radio-button::before {
+    top: 5px;
+    left: 5px; 
+    width: 18px;
+    height: 18px; 
+  }
+  .radio-button:checked::after {
+    top: 5px;
+    left: 5px; 
+    width: 18px;
+    height: 18px; 
+  }
+  .popup-textarea {
+    margin-bottom: 20px;
+  }
+  .popup-textarea__header {
+    width: 330px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  textarea::placeholder {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .popup-textarea__window {
+    width: 330px;
+    height: 98px;
+    font-size: 13px;
+    line-height: 22px;
+    padding: 10px 20px;
+
+  }
+  .popup-text__btn {
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 700;
+  }
+  .popup-submit__btn {
+    margin-bottom: 55px;
+    width: 330px;
+    height: 45px;
+  }
+  .popup-submit__btn:hover {
+    width: 330px;
+    height: 45px;
   }
 }
 
 
+/*Медиа запрос для мобильной версии*/ 
 @media (max-width: 640px) {
+  
+  /*Размеры banner под мобилку*/
   .banner {
     background-image: url(../images/banner-mobile.jpg);
     height: 100vh;
-    background-size: cover;
     background-position: center bottom;
   }
+
+  /*Размеры label под мобилку*/
   .label_title {
-    margin-top: 45%;
-    width: 80%;
-    font-size: 6vmin;
-    line-height: 8vmin;
+    width: 91.11vw;
+    margin-top: 35vh;
+    font-size: 7.22vw;
+    line-height: 10vw;
   }
+
+  /*Размеры logo под мобилку*/
   .logo {
-    width: 70%;
-    height: 20%;
-    top: 27%;
-    left: 15%;
+    width: 76vw;
+    top: 35.6vh;
+    left: 9.6vw;  
   } 
+
+  /*Скрытие menu*/
   .menu {
     visibility: hidden;
   }
+
+  /*Размеры trand_line под мобилку*/
+  .trands_line_header {
+    font-size: 4.44vw;
+    margin: 9.9vw auto 6vw;
+    font-weight: 700;
+  }
+  .trands_line_header:after {
+    width: 17.22vw;
+    height: 0.8vw;
+    margin-top: 2.2vw;
+    opacity: 0.400;
+  }
   .trands_line {
-    margin-bottom: 15vw;
+    margin-bottom: 12vw;
   }
   .trand_container  {
     width: 100%;
-    margin-top: 0.8vw;
+    height: 64.72vw;
+    margin-bottom: 1.2vw;
   }
   .trand_image {
     object-fit: cover;
   }
   .trand_description {
-    display: flex;
-    flex-direction: column;
-    width: 78%;
-    padding: 9svw 5.8vw;
-    margin: 5vw 4vw;
-  }
-  .trand_categories {
-    display: block;
-    margin-bottom: 0.5vw;
+    z-index: 3;
+    border: 3px solid #b59f5b;
+    width: 91.8%;
+    padding: 3.5vw 5vw;
+    margin: 4.16vw;
   }
   .trand_category {
-    font-size: 3.5vw;
-    line-height: 0.5vw;
+    font-size: 3.88vw;
+    line-height: 10.27vw;
+    margin-right: 5.55vw;
+    font-weight: 700;
   }
   .trand_title {
-    display: block;
-    margin-top: 3vw;
-    font-size: 5vw;
-    line-height: 6.3vw;
+    font-size: 4.44vw;
+    line-height: 5.55vw;
+    font-weight: 700;
   }
+
+  /*Размеры для новостей main под мобилку*/
   .main_box {
-    width: 97%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 92.5%;
+    margin: 0 auto;
   }
   .post_list {
     width: 100%;
   }
   .main_post {
     width: 100%;
+    margin-bottom: 7vw;
     flex-direction: column;
   }
-  .frame_box {
-    padding-bottom: 1.3rem;
-    margin-bottom: 1.4rem;
+  .main_post:nth-of-type(n+1):nth-of-type(-n+4) {
     border-bottom: 3px solid #cdcdcd;
   }
   .news_picture {
     width: 100%;
-    margin-bottom: 1.8rem;
+    height: 70vw;
+    margin-bottom: 4.16vw;
     background-color: #eff6f1;
+  }
+  .frame_category {
+    margin-right: 4.16vw;
+    font-size: 3.88vw;
+    line-height: 11.11vw;
+    font-weight: 700;
+  }
+  .frame_title {
+    font-size: 4.44vw;
+    line-height: 5.55vw;
+    font-weight: 700;
+  }
+  .main_post_pubdate {
+    font-size: 3.33vw;
+    line-height: 11.11vw;
+    font-weight: 400;
+  }
+  .author {
+    font-size: 3.33vw;
+    line-height: 11.11vw;
+    font-weight: 700;
   }
   .post_text {
     width: 100%;
+    font-size: 3.88vw;
+    line-height: 5.55vw;
+    margin-bottom: 5vw;
   }
+
+  /*Размеры для боковой полосы sidebar под мобилку*/
   .side_bar {
-    position: relative;
     margin: 0 auto;
     width: 100%;
   }
-  .latest_post_box, .tags, .themes {
-    width: 272px;
-    margin-left: auto;
-    margin-right: auto;
+  .latest_post_header {
+    margin-bottom: 6vw;
+    font-size: 4.44vw;
+    line-height: 8.05vw;
+    font-weight: 700;
   }
-  .product_line_header {
-    font-size: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+  .latest_post_header:after {
+    opacity: 0.4;
+    width: 17.5vw;
+    height: 0.83vw;
+    margin-top: 1vw;
   }
+  .latest_post_box {
+    padding: 0 4.16vw;
+  }
+  .latest_post {
+    width: 91.6vw;
+    margin-bottom: 6.11vw;
+  }
+  .latest_post_picture {
+    width: 19.44vw;
+    height: 19.44vw;
+    margin-right: 2.6vw;
+  }
+  .latest_post_pubdate {
+    opacity: 0.541;
+    font-size: 3.33vw;
+    font-weight: 400;
+  }
+  .latest_post_link {
+    font-size: 3.88vw;
+    line-height: 5vw;
+    font-weight: 700;
+  }
+  .latest_post_link:hover {
+    font-size: 3.88vw;
+    line-height: 5vw;
+    font-weight: 700;
+  }
+
+  .search {
+    width: 88.5vw;
+  }
+  .search_row {
+    margin-top: 12vw;
+    width: 88.5vw;
+    height: 13.33vw;
+    padding-left: 5vw;
+  }
+  .search_row::placeholder {
+    opacity: 0.541;
+    font-size: 3.61vw;
+    line-height: 11.11vw;
+    font-weight: 400;
+  }
+  .search_row:focus {
+    width: 88.5vw;
+    height: 13.33vw;
+  }
+  .search_submit {
+    margin-top: 12vw;
+    width: 13.33vw;
+    height: 13.33vw;
+    right: 0;
+    background-size: auto 50%;
+  }
+  .search_submit:hover {
+    width: 13.33vw;
+    height: 13.33vw;
+  }
+
+  .email_row {
+    width: 88.5vw;
+    height: 13.33vw;
+    padding-left: 2.34vw;
+    margin-bottom: 2vw;
+  }
+  .email_row::placeholder {
+    opacity: 0.541;
+    font-size: 3.61vw;
+    line-height: 11.11vw;
+    font-weight: 400;
+  }
+  .email_row:focus {
+    width: 88.5vw;
+    height: 6.25vw;
+  }
+
+  .subscribe-box {
+    margin-top: 11.5vw;
+  }
+  .subscribe_title {
+    margin-bottom: 6vw;
+    font-size: 4.44vw;
+    line-height: 8.05vw;
+    font-weight: 700;
+  }
+  .subscribe_title:after {
+    opacity: 0.4;
+    width: 17.5vw;
+    height: 0.83vw;
+    margin-top: 1vw;
+  }
+  .subscribe_text_btn {
+    font-size: 3.88vw;
+    line-height: 11.11vw;
+    font-weight: 700;
+  }
+  .subscribe_submit {
+    margin-top: 2.2vw;
+    width: 88.5vw;
+    height: 13.33vw;
+  }
+  .subscribe_submit:hover {
+    width: 88.5vw;
+    height: 13.33vw;
+  }
+
+  .tag_title {
+    margin-bottom: 6vw;
+    font-size: 4.44vw;
+    line-height: 8.05vw;
+    font-weight: 700;
+  }
+  .tag_title:after {
+    opacity: 0.4;
+    width: 17.5vw;
+    height: 0.83vw;
+    margin-top: 1vw;
+  }
+  .tags {
+    width: 88.5vw;
+    margin: 11.5vw auto 0 auto;
+  }
+  .tag_list {
+    margin-top: 4vw;
+  }
+  .tag {
+    font-size: 3.33vw;
+    font-weight: 700;
+  }
+  .border {
+    display: block;
+    margin-right: 1.65vw;
+    margin-bottom: 1.66vw;
+    padding: 1.94vw 3.05vw;
+    text-align: center;
+    background-color: rgba(244,243,241,0);
+    border: 0.18vw solid #eeeeee;
+  }
+  .border:hover {
+    background-color: rgba(244,243,241,0);
+    border: 0.18vw solid #b59f5b;
+    cursor: pointer;
+  }
+
+  .themes {
+    width: 88.5vw;
+    margin: 11.5vw auto 0 auto;
+  }
+  .themes_title {   
+    margin-bottom: 6vw;
+    font-size: 4.44vw;
+    line-height: 8.05vw;
+    font-weight: 700;
+  }
+  .themes_title:after {
+    opacity: 0.4;
+    width: 17.5vw;
+    height: 0.83vw;
+    margin-top: 1vw;
+  }
+  .theme {
+    font-size: 3.88vw;
+    line-height: 13.05vw;
+    font-weight: 700;
+  }
+  .theme:hover {
+    font-size: 3.88vw;
+    line-height: 13.05vw;
+    font-weight: 700;
+  }
+  .themes_index {
+    font-size: 3.33vw;
+    line-height: 10vw;
+    font-weight: 700;
+  }
+  .indextheme_hr {
+    width: 88.5vw;
+    height: 0.13vw;
+    margin-top: -0.4vw;
+  }
+  
+  /*Размеры для полосы product под мобилку*/
   .products_line {
     flex-direction: column;
-    margin-top: -0.7%;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
+    width: 88.5vw;
+    margin: 9.5vw auto 0 auto;
+  }
+  .product_box {
+    display: flex;
+    flex-direction: column;
+  }
+  .product_line_header {
+    margin-bottom: 6vw;
+    font-size: 4.44vw;
+    line-height: 8.05vw;
+    font-weight: 700;
+  }
+  .product_line_header:after {
+    opacity: 0.4;
+    width: 17.5vw;
+    height: 0.83vw;
+    margin: 1vw auto 0 auto;
   }
   .product_container  {
-    margin-top: 4%;
-    width: 99%;
+    margin-bottom: 5vw;
   }
-  .products_title {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .product_title {
+    font-size: 4.72vw;
+    line-height: 6.11vw;
   }
   .image_container {
-    width: 75%;
+    width: 78vw;
     margin-left: auto;
     margin-right: auto;
   }
   .product_image {
     width: 100%;
+    height: 100%;
   }
   .product_description {
     border: 3px solid #b59f5b;
-    height: 100%;
-    padding: 15% 5%;
+    padding: 15% 5% 7% 5%;
     margin-top: -12%;
-    margin-right: calc(-8vw + 8%);
-    width: 80vw;
+    margin-right: calc(-8vw + 10%);
+    width: 78vw;
   }
+  .product_description_paragraph {
+    font-size: 4.16vw; 
+    line-height: 6.11vw;
+    font-weight: 400;
+  }
+  .product_description_paragraph:hover {
+    opacity: 0.8;
+  }
+  .product_link:hover {
+    opacity: 0.9;
+  }
+
+  .price_and_magazine_container {
+    margin-top: 6.5vw;
+  }
+  .price_container {
+    padding-bottom: 1%;
+    width: 45%;
+  }
+  .price_title_small {
+    font-size: 3.88vw;
+    line-height: 6.66vw;
+    font-weight: 700;
+  }
+  .price_title_big {
+    font-size: 5.55vw;
+    line-height: 6.66vw;
+    font-weight: 700;
+  }
+  
+  .magazine_submit {
+    width: 45%;
+    height: 12.5vw;
+  }
+  .magazine_submit:hover {
+    width: 45%;
+    height: 12.5vw;
+  }
+  .magazine_submit_title {
+    font-size: 3.88vw;
+    line-height: 11.11vw;
+    font-weight: 700;
+  }
+
   .footer_banner {
-    width: 95%;
-    height: 83px;
+    width: 88.5vw;
+    height: 23.05vw;
     background-color: #f4f7f6;
-    margin-top: 4%;
-    margin-left: 2.5%;
-  }
-  .copyright {
-    margin: 0 auto;
-  }
-}
-
-
-@media (max-width: 359px) {
-  .product_description {
-    border: 3px solid #b59f5b;
-    height: 100%;
-    padding: 15% 5%;
-    margin-top: -12%;
-    margin-right: calc(-8vw + 8%);
-    width: 80vw;
-  }
-  .product_title {
-    font-size: 6vw;
+    margin: 12vw auto;
   }
   .socials {
-    margin-right: 10vw;
+    width: 33.33vw;
   }
-  .footer_banner {
+  .icon {
+    width: 6vw;
+    height: 6vw;
+  }
+  .copyright {
+    width: 88.5vw;
+    margin: 0 auto 6vw;
+    font-size: 3.33vw;
+    line-height: 11.11vw;
+    font-weight: 700;
+  }
+
+/*Размеры popup для мобилки*/
+  .back::before {
+    z-index: 4;
+    left: 0; 
+    top: 0;
     width: 100%;
-    background-color: #f4f7f6;
+    height: 100%;
+    opacity: 0.6;
+  }
+  .popup-body {
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 31;
+  }
+  .popup-content {
+    margin: 14.5vw auto;
+    width: 330px;
+  }
+  .checkbox__hidden::after {
+    right: 0;
+    top: 0;
+    margin-top: -30px;
+    width: 27px;
+    height: 27px;
+  }
+  .popup-header {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .popup-title {
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 700;
+  }
+  .popup-title:after {
+    opacity: 0.4;
+    width: 66px;
+    height: 3px;
+  }
+  .popup-select {
+    margin-bottom: 20px;
+  }
+  .popup-select__row::after {
+    right: 5px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+  }
+  select {  
+    padding-right: 25px;
+  }
+  .popup-select__header {
+    font-size: 13px;
+    line-height: 40px;
+  }
+  .popup-select__options {
+    padding-left: 20px;
+    width: 280px;
+    height: 45px;
+    font-size: 13px; 
+  }
+  .popup-select__option {
+    font-size: 13px;  
+    opacity: 0.541;
+  }
+  .popup-radio__box {
+    margin-left: -60px;
+    margin-bottom: 1.25rem;
+  }
+  .popup-radio__header {
+    font-size: 13px;
+  }
+  .radio-button__text {
+    font-size: 13px;  
+    margin-right: 60px;
+  }
+  .radio-button  {
+    height: 23px;
+    width: 23px;
+  }
+  .radio-button::before {
+    top: 10px;
+    left: 5px; 
+    width: 17px;
+    height: 17px; 
+  }
+  .radio-button:checked::after {
+    top: 10px;
+    left: 5px; 
+    width: 18px;
+    height: 18px; 
+  }
+  .popup-textarea {
+    margin-bottom: 20px;
+  }
+  .popup-textarea__header {
+    width: 280px;
+    font-size: 0.8rem;
+    line-height: 22px;
+  }
+  textarea::placeholder {
+    font-size: 13px;  
+    line-height: 22px;
+  }
+  .popup-textarea__window {
+    width: 280px;
+    height: 130px;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px 20px;
+  }
+  .popup-text__btn {
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 700;
+  }
+  .popup-submit__btn {
+    margin-bottom: 30px;
+    width: 280px;
+    height: 45px;
+  }
+  .popup-submit__btn:hover {
+    width: 280px;
+    height: 45px;
   }
 }
 
+
+/*Медиа запрос для таблет версии в ландшафтной ориентации*/
 @media (orientation: landscape) and (min-width: 641px) and (max-width: 1200px) {
   .trand_container  {
     width: 24.8%;
+    height: 20vw;
   }
   .trand_description {
-    display: flex;
-    flex-direction: column;
-    width: 18.8vw;
-    padding: 2vw 1.2vw;
-    margin: 1vw 1.4vw;
-  }
-  .trand_categories {
-    display: block;
-    margin-bottom: 0.2vw;
+    width: 21.5vw;
+    padding: 1.65vw 2vw 1.65vw 2vw;
+    margin-left: 1.5vw;
+    margin-bottom: 1.15vw;
   }
   .trand_category {
-    font-size: 0.9vw;
-    line-height: 0.3vw;
+    font-weight: 700;
+    font-size: 0.84vw;
+    line-height: 2.4vw;
+    margin-right: 1vw;
   }
   .trand_title {
-    margin-top: 0.5vw;
-    display: block;
-    font-size: 1.3vw;
-    line-height: 1.75vw;
+    font-weight: 700;
+    font-size: 1.2vw;
+    line-height: 1.45vw;
   }
 }
 
+
+/*Медиа запрос для мобильной версии в ландшафтной ориентации*/
 @media (orientation: landscape) and (min-width: 360px) and (max-width: 640px) {
   .banner {
-    background-image: url(../images/banner-mobile.jpg);
+    background-image: url(../images/banner-bg-tablet.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center bottom;
   }
   .label_title {
-    margin-top: 20%;
-    width: 80%;
-    font-size: 6vmin;
-    line-height: 8vmin;
+    width: 80vw;
+    margin-top: 13.5vw;
+    font-size: 5.2vw;
+    line-height: 7.15vw;;
   }
   .logo {
-    width: 70%;
-    height: 20%;
-    top: 27%;
-    left: 15%;
+    width: 76vw;
+    top: 17vh;
+    left: 11.6vw;
   } 
   .trand_container  {
     width: 49.8%;
-    margin-top: 0.28vw;
-  }
-  .trand_description {
-    display: flex;
-    flex-direction: column;
-    width: 72%;
-    padding: 5.2vw 3.8vw;
-    margin: 1.8vw 2.2vw;
-  }
-  .trand_categories {
-    display: block;
+    height: 32.5vw;
     margin-bottom: 0.5vw;
   }
+  .trand_description {
+    z-index: 3;
+    border: 3px solid #b59f5b;
+    width: 45vw;
+    padding: 4.55vw 4.03vw 4.55vw 4.03vw;
+    margin-left: 2.6vw;
+    margin-bottom: 1.7vw;
+  }
   .trand_category {
-    font-size: 2vw;
-    line-height: 0.5vw;
+    font-size: 1.82vw;
+    line-height: 4.81vw;
+    font-weight: 700;
+    margin-right: 1vw;
   }
   .trand_title {
-    display: block;
-    margin-top: 1vw;
-    font-size: 3vw;
-    line-height: 3.3vw;
+    font-weight: 700;
+    font-size: 2.21vw;
+    line-height: 2.86vw;
   }
 }
 
 
+/*ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ МЕДИА ЗАПРОСОВ*/
+
+/*Стили для титульного фото banner*/
 .banner {
   overflow: hidden;
   position: relative;
@@ -534,11 +1802,12 @@
   opacity: 0.6;
 }
 .logo { 
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 
+/*Стили и размеры для бургер меню*/
 .burger-menu_button {
   position: fixed;
   top: 2.5rem;
@@ -584,6 +1853,8 @@
   left: -1px;
 }
 
+
+/*Стили для заголовка label сайта*/
 .label_title {
   display: block;
   margin-left: auto;
@@ -597,6 +1868,7 @@
 }
 
 
+/*Стили и размеры для меню*/
 .menu {
   width: 27.8%;
   left: 57%;
@@ -622,26 +1894,22 @@
 }
 
 
+/*Стили для полосы трендов*/
 .trands_line {
   display: flex;
   flex-direction: column;
 }
 .trands_line_header {
-  margin: 5% auto 2%;
   text-align: center;
   text-transform: uppercase;
   color: #0f0d0e;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
 .trands_line_header:after {
   content: '';
   background-color: #b59f5b;
-  opacity: 0.4;
   margin-left: auto;
   margin-right: auto;
-  width: 4.125rem;
-  height: 0.1875rem;
   display: block;
 }
 .trands_line_container {
@@ -654,22 +1922,21 @@
   display: flex;
   align-items: flex-end;
   position: relative;
-}
+} 
 .trand_description {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   position: absolute;
-  z-index: 3;
-  border: 3px solid #b59f5b;
 }
 .trand_categories {
   display: flex;
   list-style-type: none;
 }
 .trand_category {
-  margin-right: 1.2%;
   text-transform: uppercase;
   color: #b59f5b;
-  font-weight: 700;
-  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-family: OpenSans-Regular, Arial, sans-serif
 }
 .trand_category:hover {
   text-decoration-line: underline;
@@ -678,8 +1945,8 @@
 .trand_title {
   text-transform: uppercase;
   color: #ffffff;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
+  display: block;
 }
 .trand_title:hover {
   color: #b59f5b;
@@ -706,39 +1973,21 @@
 }
 
 
-.main_box {
-  display: flex;
-  margin-top: 3.9%;
-  margin-bottom: 2%;
-}
+/*Стили для полосы новостей main*/
 .main_post {
   display: flex;
-  margin-bottom: 10%
 }
-.main_post_pubdate {
-  font-size: 12px;
-  line-height: 40px;
-  color: #888888;
-  font-weight: 400;
-  font-family: OpenSans-Regular, Arial, sans-serif;
-}
-
-
 .news_picture {
+  background-size: cover;
   background-color: #eff6f1;
 }
-
 .frame_category_box {
   display: flex;
-  margin-top: -2px;
   list-style-type: none;
 }
 .frame_category {
-  margin-right: 20px;
-  font-size: 14px;
   text-transform: uppercase;
   color: #b59f5b;
-  font-weight: 700;
   font-family: OpenSans-Regular, Arial, sans-serif;
 }
 .frame_category:hover {
@@ -746,150 +1995,97 @@
   cursor: pointer;
 }
 .frame_title {
-  font-size: 20px;
-  margin-top: 3px;
-  margin-bottom: 20px;
-  line-height: 24px;
+  display: block;
   text-transform: uppercase;
   color: #0f0d0e;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
 .frame_title:hover {
   color: #b59f5b;
   cursor: pointer;
 }
-
-
+.main_post_pubdate {
+  color: #888888;
+  font-family: OpenSans-Regular, Arial, sans-serif;
+}
 .author {
-  font-size: 12px;
-  line-height: 40px;
   color: #000000;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
-
-
 .post_text {
-  margin-top: 30px;
-  line-height: 22px;
   color: #0f0d0e;
   font-family: OpenSans-Regular, Arial, sans-serif;
 }
 
 
-.side_bar {
-  margin-top: 3.9%;
-}
-
-
+/*Стили для боковой полосы Sidebar*/
 .latest_post_header {
-  margin-top: -8px;
-  margin-bottom: 30px;
-  width: 272px;
-  font-size: 14px;
-  line-height: 29px;
   text-align: center;
-  text-transform: uppercase;
   color: #0f0d0e;
-  font-weight: 700;
+  text-transform: uppercase;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
 .latest_post_header:after {
   content: '';
   background-color: #b59f5b;
-  opacity: 0.4;
   margin-left: auto;
   margin-right: auto;
-  width: 66px;
-  height: 3px;
   display: block;
 }
 .latest_post {
   display: flex;
-  margin-bottom: 22px;
 }
 .latest_post_picture {
-  width: 70px;
-  height: 70px;
   background-color: #f4f7f6;
-  margin-right: 1.15%;
 }
 .latest_post_pubdate {
-  opacity: 0.541;
-  font-size: 12px;
-  color: #000000;
-  font-weight: 400;
+  color: #888888;
   font-family: OpenSans-Regular, Arial, sans-serif;
 }
 .latest_post_link {
-  font-size: 14px;
-  line-height: 18px;
   text-transform: uppercase;
   color: #000000;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
   text-decoration-line: none;
   color: #000000;
 }
 .latest_post_link:hover {
-  font-size: 14px;
-  line-height: 18px;
   text-transform: uppercase;
   color: #b59f5b;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
   cursor: pointer;
 }
-
 
 .search {
   display: flex;
   position: relative;
 }
 .search_row {
-  margin-top: 60px;
-  width: 270px;
-  height: 48px;
-  padding-left: 20px;
   border: none;
   background-color: #f4f7f6;
 }
 .search_row::placeholder {
-  opacity: 0.541;
-  font-size: 13px;
-  line-height: 40px;
   color: #000000;
-  font-weight: 400;
   font-family: OpenSans-Regular, Arial, sans-serif;
 }
 .search_row:focus {
-  width: 260px;
-  height: 48px;
   background-color: #f4f7f6;
-  outline: 1px solid #b59f5b;;
+  outline: 1px solid #b59f5b;
 }
 .search_submit {
-  margin-top: 60px;
-  width: 48px;
-  height: 48px;
   border: none;
   position: absolute;
-  right: 0;
   background-color: #b59f5b;
   background-position: center;
-  background-size: auto 50%;
   background-repeat: no-repeat;
   background-image: url(../svg/search.svg)
 }
 .search_submit:hover {
-  width: 48px;
-  height: 48px;
   background-color: #323232;
   cursor: pointer;
 }
 
-
+/*Скрытие*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -901,212 +2097,126 @@
   overflow: hidden;
 } 
 
-
 .email_row {
   box-sizing: border-box;
-  width: 272px;
-  height: 48px;
-  margin-top: 20px;
-  padding-left: 20px;
   background-color: #f4f7f6;
   border: none;
 }
 .email_row::placeholder {
-  opacity: 0.541;
-  font-size: 13px;
-  line-height: 40px;
   color: #000000;
-  font-weight: 400;
   font-family: OpenSans-Regular, Arial, sans-serif;
 }
 .email_row:focus {
-  width: 272px;
-  height: 48px;
   background-color: #f4f7f6;
   outline: 1px solid #b59f5b;
 }
 
-
 .subscribe_title {
-  width: 272px;
-  margin-top: 60px;
-  font-size: 14px;
-  line-height: 29px;
   text-align: center;
   text-transform: uppercase;
   color: #0f0d0e;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
 .subscribe_title:after {
   content: '';
   background-color: #b59f5b;
-  opacity: 0.4;
   margin-left: auto;
   margin-right: auto;
-  width: 66px;
-  height: 3px;
   display: block;
 }
 .subscribe_text_btn {
-  font-size: 14px;
-  line-height: 40px;
   text-transform: uppercase;
   color: #ffffff;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
 .subscribe_submit {
-  margin-top: 16px;
-  width: 272px;
-  height: 48px;
   background-color: #b59f5b;
   border: none;
 }
 .subscribe_submit:hover {
-  width: 272px;
-  height: 48px;
   background-color: #323232;
   cursor: pointer;
 }
 
-
 .tag_title {
-  margin-top: 60px;
-  font-size: 14px;
-  line-height: 29px;
   text-align: center;
   text-transform: uppercase;
   color: #0f0d0e;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
 .tag_title:after {
   content: '';
   background-color: #b59f5b;
-  opacity: 0.4;
   margin-left: auto;
   margin-right: auto;
-  width: 66px;
-  height: 3px;
   display: block;
 }
 .tag_list {
-  margin-top: 24px;
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
 }
 .tag {
-  font-size: 12px;
   text-decoration-line: none;
   text-transform: uppercase;
   color: #0f0d0e;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
 
-
-.border {
-  margin-right: 5px;
-  margin-bottom: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  text-align: center;
-  background-color: rgba(244,243,241,0);
-  border: 3px solid #eeeeee;
-}
-.border:hover {
-  background-color: rgba(244,243,241,0);
-  border: 3px solid #b59f5b;
-  cursor: pointer;
-}
-
-
 .themes_title {
-  margin-top: 52px;
-  font-size: 14px;
-  line-height: 29px;
   text-align: center;
   text-transform: uppercase;
   color: #0f0d0e;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
 .themes_title:after {
   content: '';
   background-color: #b59f5b;
-  opacity: 0.4;
   margin-left: auto;
-  margin-right: auto;
-  width: 66px;
-  height: 3px;
+  margin-right: auto;;
   display: block;
 }
 .theme_list {
-  width: 272px;
   display: block;
   list-style-type: none;
-  margin-top: 7px;
 }
 .theme {
-  font-size: 14px;
-  line-height: 47px;
   text-decoration-line: none;
   color: #000000;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
-}
-.themes_index {
-  font-size: 12px;
-  line-height: 36px;
-  color: #b59f5b;
-  font-weight: 700;
-  font-family: OpenSans-Bold, Arial, sans-serif;
-}
-.indextheme_hr {
-  width: 272px;
-  height: 1px;
-  background-color: #ededed;
-  border: none;
-  margin-top: -7px;
 }
 .theme:hover {
-  font-size: 14px;
-  line-height: 47px;
   color: #b59f5b;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
   cursor: pointer;
 }
+.themes_index {
+  color: #b59f5b;
+  font-family: OpenSans-Bold, Arial, sans-serif;
+}
+.indextheme_hr {
+  background-color: #ededed;
+  border: none;
+}
 
 
+/*Стили для полосы product*/
 .product_line_header {
-  line-height: 29px;
+  display: block;
   text-align: center;
   text-transform: uppercase;
   color: #0f0d0e;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
 .product_line_header:after {
   content: '';
-  background-color: #b59f5b;
-  opacity: 0.4;
-  margin-left: auto;
-  margin-right: auto;
-  width: 66px;
-  height: 3px;
+  background-color: #b59f5b; 
   display: block;
 }
 .products_line {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; 
   flex-wrap: wrap;
-  height: 100%;
-  margin-top: -0.7%;
 }
 .product_container  {
   display: flex;
@@ -1116,21 +2226,19 @@
 .product_title {
   text-transform: uppercase;
   color: #000000;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
 .product_title:hover {
   color: #b59f5b;
   cursor: pointer;
 }
-.product_description_paragraph {
-  line-height: 22px;
-  color: #0f0d0e;
-  font-weight: 400;
-  font-family: OpenSans-Regular, Arial, sans-serif;
+.image_container {
+  margin-right: auto;
+  margin-left: auto;
 }
-.product_description_paragraph:hover {
-  opacity: 0.8;
+.product_description_paragraph {
+  color: #0f0d0e;
+  font-family: OpenSans-Regular, Arial, sans-serif;
 }
 .product_link {
   color: #b59f5b; 
@@ -1139,90 +2247,60 @@
   color: #b59f5b;
   cursor: pointer;
   text-decoration-line: none;
-  opacity: 0.9;
 }
-
-
 .price_and_magazine_container {
   display: flex;
-  margin-top: 7%;
 }
 .price_container {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 1%;
-  width: 45%;
 }
 .price_title_small {
-  font-size: 14px;
-  line-height: 24px;
   text-decoration: line-through;
   text-transform: uppercase;
   color: #0f0d0e;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
-  margin-bottom: -2px;
 }
 .price_title_big {
-  font-size: 20px;
-  line-height: 24px;
   text-transform: uppercase;
   color: #0f0d0e;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
-  margin-top: -2px;
 }
 .magazine_submit {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
-  width: 45%;
-  height: 2.8rem;
   background-color: #b59f5b;
   border: none;
 }
 .magazine_submit:hover {
-  width: 45%;
-  height: 2.8rem;
   background-color: #323232;
   cursor: pointer;
 }
 .magazine_submit_title {
-  font-size: 14px;
-  line-height: 40px;
   text-transform: uppercase;
   color: #ffffff;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
 
 
+/*Стили для баннера в footer*/
 .footer_banner {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f4f7f6;
 }
-
-
 .socials {
   display: flex;
   justify-content: space-between;
-  width: 9%;
   list-style-type: none;
 }
-.icon {
-  width: 20px;
-  height: 20px;
-}
+
 .copyright {
   display: block;
-  width: 68%;
-  margin-top: 4%;
-  font-size: 12px;
-  line-height: 40px;
   color: #999999;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
   cursor: pointer;
   text-decoration-line: none;
@@ -1230,212 +2308,153 @@
 }
 
 
-.popup_hidden {
-  display: none;
-}
+/* Группа стилей для Popup*/
 .back::before {
   content: " ";
   position: fixed;
-  left: 0; 
-  top: 0;
-  width: 100%;
-  height: 100%;
   background-color: black;
-  opacity: 0.6;
 }
-.popup_close {
-  visibility: hidden;
-}
-.popup_body {
+.popup-body {
   position: fixed;
-  left: 0; 
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 29;
 }
-.popup_content {
-  margin: 7% auto;
-  width: 24.375rem;
+.popup-content {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0 1.735rem;
   align-items: center;
   background-color: white;
 }
-.popup_header {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.checkbox__hidden {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-.popup_title {
-  width: 10vw;
-  font-size: 1.1428vw;
-  line-height: 29px;
+.checkbox__hidden::after {
+  content: " ";
+  position: absolute;
+  background-image: url(../svg/form-x.svg);
+  cursor: pointer;
+}
+.popup-title {
   text-align: center;
   text-transform: uppercase;
   color: #0f0d0e;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
-.popup_title:after {
+.popup-title:after {
   content: '';
   background-color: #b59f5b;
-  opacity: 0.4;
   margin-left: auto;
   margin-right: auto;
-  width: 66px;
-  height: 3px;
   display: block;
 }
-.popup_select {
+.popup-select {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
 }
-.popup_select_row {
+.popup-select__row {
   position: relative;
   display: inline-block;
 }
-.popup_select_row::after {
-  color: #b59f5b;
-  content: "⬍";
-  padding: 0 8px;
-  font-size: 1.75rem;
+.popup-select__row::after {
+  content: '';
+  background-image: url(../svg/form-arrows.svg);
+  background-repeat: no-repeat; 
+  background-size: contain;
   position: absolute;
-  right: 2px;
-  top: 4px;
-  z-index: 1;
   text-align: center;
-  width: 10%;
-  height: 100%;
-  pointer-events: none;
-  box-sizing: border-box;
 }
 select {
-  padding-right: 25px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
-.popup_select_header {
-  font-size: 0.8rem;
-  line-height: 22px;
-  color: #0f0d0e;
-  font-family: OpenSans-Regular, Arial, sans-serif;
-}
-.popup_select_options {
-  padding-left: 5px;
-  background-color: whitesmoke;
-  width: 21rem;
-  height: 3rem;
-}
-.popup_select_options::focus {
-  border: 1px solid #b59f5b;
-}
-.popup_select_option {
-  font-size: 0.8125rem;
-  font-family: OpenSans-Regular, Arial, sans-serif;
-  opacity: 0.541;
-  font-size: 13px;
+.popup-select__header {
   color: #000000;
+  font-family: OpenSans-Regular, Arial, sans-serif;
 }
-.popup_radio {
+.popup-select__options {
+  background-color: whitesmoke;
+  font-family: OpenSans-Regular, Arial, sans-serif;
+  color: grey;
+  border: none;
+}
+.popup-select__options::focus {
+  outline: 1px solid #b59f5b;
+}
+.popup-select__option {
+  font-family: OpenSans-Regular, Arial, sans-serif;
+  color: grey;
+}
+.popup-radio__box {
   display: flex;
   flex-direction: column;
-  margin-right: auto;
-  margin-bottom: 1rem;
 }
-.popup_radio_header {
+.popup-radio__header {
   display: block;
-  font-size: 0.8rem;
-  line-height: 22px;
-  color: #0f0d0e;
+  color: #000000;
   font-family: OpenSans-Regular, Arial, sans-serif;
 }
-.radio_btn_text {
-  font-size: 0.8rem;
-  line-height: 22px;
-  color: #0f0d0e;
+.radio-button__text {
+  color: #000000;
   font-family: OpenSans-Regular, Arial, sans-serif;
 }
-.radio_btn  {
+.radio-button  {
   position: relative;
-  height: 22px;
-  width: 22px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
 }
-.radio_btn::before {
-  content: '';
+.radio-button::before {
   position: absolute;
-  top: 70%;
-  left: 70%;
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  border: 2px solid #b59f5b;
+  content: " ";
+  background-image: url(../svg/form-empty-circle.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.radio_btn:checked::after {
+.radio-button:checked::after {
   content: '';
+  background-image: url(../svg/form-circle.svg);
   position: absolute;
-  top: 70%;
-  left: 70%;
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 50%;
-  background-color: #b59f5b;
-  transform: translate(-50%, -50%);
-  visibility: visible;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.popup_textarea {
+.popup-textarea {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-.popup_textarea_header {
+.popup-textarea__header {
   display: block;
-  font-size: 0.8rem;
-  line-height: 22px;
-  color: #0f0d0e;
+  box-sizing: border-box;
+  color: #000000;
   font-family: OpenSans-Regular, Arial, sans-serif;
 }
 textarea::placeholder {
-  font-size: 0.8rem;
-  line-height: 22px;
-  color: #0f0d0e;
+  color: grey;
   font-family: OpenSans-Regular, Arial, sans-serif;
 }
-.popup_textarea_window {
+textarea::focus {
+  outline: 1px solid #b59f5b;
+}
+.popup-textarea__window {
   resize: none;
   background-color: whitesmoke;
-  font-size: 0.8rem;
-  line-height: 22px;
   color: #0f0d0e;
   font-family: OpenSans-Regular, Arial, sans-serif;
-  padding: 5px 5px 5px 5px;
+  border: none;
+  box-sizing: border-box;
 }
-.popup_text_btn {
-  font-size: 1.1428rem;
-  line-height: 40px;
+.popup-text__btn {
   text-transform: uppercase;
   color: #ffffff;
-  font-weight: 700;
   font-family: OpenSans-Bold, Arial, sans-serif;
 }
-.popup_submit_btn {
-  margin-top: 1rem;
-  width: 21rem;
-  height: 3rem;
+.popup-submit__btn {
   background-color: #b59f5b;
   border: none;
-  margin-bottom: 2rem;
 }
-.popup_submit_btn:hover {
-  width: 21rem;
-  height: 3rem;
+.popup-submit__btn:hover {
   background-color: #323232;
   cursor: pointer;
 }
