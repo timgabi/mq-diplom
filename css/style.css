@@ -2539,7 +2539,7 @@ textarea:focus {
   }
   .banner__title {
     width: 80vw;
-    margin-top: 13.5vw;
+    margin: 13.5vw auto 0 auto;
     font-size: 5.2vw;
     line-height: 7.15vw;;
   }
