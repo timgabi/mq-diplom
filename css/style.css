@@ -1088,7 +1088,7 @@ textarea:focus {
   .magazine-submit:hover {
     width: 45.5%;
     height: 3vw;
-    margin: 0 0.4vw 0 0;
+    margin: 0.1vw 0.4vw 0 0;
   }
   .magazine-submit__title {
     font-size: 0.84vw;
